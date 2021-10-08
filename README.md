@@ -11,7 +11,14 @@ Once the project is set up, you will see 5 packages:
 
 * demo - this package contains the main method which runs the application
 
-* model.persistence - this package contains the data models that Hibernate persists to H2. There are 4 models: Cart, for holding a User's items; Item , for defining new items; User, to hold user account information; and UserOrder, to hold information about submitted orders. Looking back at the application “demo” class, you'll see the `@EntityScan` annotation, telling Spring that this package contains our data models
+* model.persistence - this package contains the data models that Hibernate persists to H2. 
+  * There are 4 models: 
+    * Cart, for holding a User's items;
+      * Item , for defining new items; 
+      * User, to hold user account information;
+      * UserOrder, to hold information about submitted orders. 
+  * Looking back at the application “demo” class, you'll see the `@EntityScan` annotation, telling Spring that this package contains our data models
+   
 
 * model.persistence.repositories - these contain a `JpaRepository` interface for each of our models. This allows Hibernate to connect them with our database so we can access data in the code, as well as define certain convenience methods. Look through them and see the methods that have been declared. Looking at the application “demo” class, you’ll see the `@EnableJpaRepositories` annotation, telling Spring that this package contains our data repositories.
 

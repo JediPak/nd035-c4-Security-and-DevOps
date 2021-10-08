@@ -17,7 +17,7 @@ public class Helper {
 		
 		/**
 		 * Method to get the stats of a list of numbers 
-		 * @param numbers
+		 * @param expYears
 		 * @return
 		 */
 		public static IntSummaryStatistics getStats(List<Integer> expYears) {

@@ -1,0 +1,50 @@
+package com.udacity.examples.Testing;
+
+
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.List;
+
+import static org.junit.Assert.assertEquals;
+
+
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.junit.runners.Parameterized;
+import org.junit.runners.Parameterized.Parameters;
+
+@RunWith(Parameterized.class)
+public class ParameterTest {
+
+   private List <String> input;
+   private String output;
+
+   public ParameterTest(List <String> input) {
+      super();
+      this.input = input;
+   }
+
+   @Parameters
+   public static Collection initData(){
+      Object[][] inputs = new Object[3][2];
+
+      inputs[0][0] = Arrays.asList("One", "", "Two", "", "", "", "Three");
+      inputs[0][1] =  "One, Two, Three";
+
+      inputs[1][0] = Arrays.asList("One", "", "Two", "Three", "", "", "Four");
+      inputs[1][1] =  "One, Two, Three, Four";
+
+      inputs[2][0] = Arrays.asList("One", "Two", "", "", "", "", "");
+      inputs[2][1] =  "One";
+
+      return Arrays.asList(inputs);
+   }
+
+   @Test
+   public void VerifyTest(){
+      String actual = Helper.getMergedList(input);
+      assertEquals("Comparing output for getMergedList()",
+              actual, output);
+
+   }
+}

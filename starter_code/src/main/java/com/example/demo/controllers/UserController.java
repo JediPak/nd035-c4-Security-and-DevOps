@@ -1,7 +1,9 @@
 package com.example.demo.controllers;
 
 import java.util.Optional;
+import java.util.logging.LogManager;
 
+import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration;
@@ -21,6 +23,8 @@ import com.example.demo.model.persistence.repositories.CartRepository;
 import com.example.demo.model.persistence.repositories.UserRepository;
 import com.example.demo.model.requests.CreateUserRequest;
 
+import org.slf4j.LoggerFactory;
+
 @RestController
 @RequestMapping("/api/user")
 public class UserController {
@@ -33,6 +37,8 @@ public class UserController {
 
 	@Autowired
 	private BCryptPasswordEncoder bCryptPasswordEncoder;
+
+	public static final Logger log = LoggerFactory.getLogger(UserController.class);
 
 	@GetMapping("/id/{id}")
 	public ResponseEntity<User> findById(@PathVariable Long id) {
@@ -49,6 +55,7 @@ public class UserController {
 	public ResponseEntity<User> createUser(@RequestBody CreateUserRequest createUserRequest) {
 		User user = new User();
 		user.setUsername(createUserRequest.getUsername());
+		log.info("User name set up with", createUserRequest.getUsername());
 		Cart cart = new Cart();
 		cartRepository.save(cart);
 		user.setCart(cart);
@@ -56,7 +63,8 @@ public class UserController {
 		if(createUserRequest.getPassword().length() < 7 ||
 			!createUserRequest.getPassword().equals(createUserRequest.getConfirmPassword()))
 		{
-
+			log.debug("User build failed, length wasn't long enough or " +
+					"password wasn't equal to confirm password");
 			return ResponseEntity.badRequest().build();
 		}
 

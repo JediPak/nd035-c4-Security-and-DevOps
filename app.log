@@ -20,3 +20,24 @@
 2021-12-31 01:52:34,671 INFO com.example.demo.controllers.UserController [http-nio-8080-exec-2] CreateUser request failure for user[test02]
 2021-12-31 01:55:53,334 INFO com.zaxxer.hikari.HikariDataSource [SpringContextShutdownHook] HikariPool-1 - Shutdown initiated...
 2021-12-31 01:55:53,342 INFO com.zaxxer.hikari.HikariDataSource [SpringContextShutdownHook] HikariPool-1 - Shutdown completed.
+2021-12-31 02:03:22,566 INFO com.example.demo.SareetaApplication [main] Starting SareetaApplication on Jedis-MBP.hsd1.ca.comcast.net with PID 7583 (/Users/JediPak/Desktop/nd035-c4-Security-and-DevOps/starter_code/target/classes started by JediPak in /Users/JediPak/Desktop/nd035-c4-Security-and-DevOps)
+2021-12-31 02:03:22,573 DEBUG com.example.demo.SareetaApplication [main] Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2021-12-31 02:03:22,574 INFO com.example.demo.SareetaApplication [main] No active profile set, falling back to default profiles: default
+2021-12-31 02:03:27,472 INFO org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
+2021-12-31 02:03:27,472 INFO org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/9.0.29]
+2021-12-31 02:03:27,827 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [main] Initializing Spring embedded WebApplicationContext
+2021-12-31 02:03:28,540 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-12-31 02:03:29,222 INFO org.hibernate.Version [main] HHH000412: Hibernate Core {5.4.9.Final}
+2021-12-31 02:03:29,629 INFO org.hibernate.annotations.common.Version [main] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2021-12-31 02:03:29,938 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2021-12-31 02:03:30,455 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2021-12-31 02:03:30,498 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-12-31 02:03:32,601 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-12-31 02:03:34,459 DEBUG com.example.demo.security.JWTAuthenticationVerficationFilter [main] Filter 'JWTAuthenticationVerficationFilter' configured for use
+2021-12-31 02:03:37,682 INFO com.example.demo.SareetaApplication [main] Started SareetaApplication in 16.579 seconds (JVM running for 19.31)
+2021-12-31 02:04:14,376 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-12-31 02:04:14,826 INFO com.example.demo.controllers.UserController [http-nio-8080-exec-1] User name set up with
+2021-12-31 02:04:14,934 ERROR com.example.demo.controllers.UserController [http-nio-8080-exec-1] [UserController] CreateUser request failure for user[test02]
+2021-12-31 02:04:14,936 DEBUG com.example.demo.controllers.UserController [http-nio-8080-exec-1] User build failed, length wasn't long enough or password wasn't equal to confirm password
+2021-12-31 02:04:21,146 INFO com.zaxxer.hikari.HikariDataSource [SpringContextShutdownHook] HikariPool-1 - Shutdown initiated...
+2021-12-31 02:04:21,150 INFO com.zaxxer.hikari.HikariDataSource [SpringContextShutdownHook] HikariPool-1 - Shutdown completed.

@@ -30,7 +30,7 @@ public class OrderController {
 	@Autowired
 	private OrderRepository orderRepository;
 
-	private static Logger logger = LoggerFactory.getLogger(OrderController.class);
+	private static final Logger logger = LoggerFactory.getLogger(OrderController.class);
 	
 	@PostMapping("/submit/{username}")
 	public ResponseEntity<UserOrder> submit(@PathVariable String username) {

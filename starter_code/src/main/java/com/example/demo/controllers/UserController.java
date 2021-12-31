@@ -1,7 +1,9 @@
 package com.example.demo.controllers;
 
 import java.util.Optional;
+import java.util.logging.LogManager;
 
+import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration;
@@ -23,6 +25,8 @@ import com.example.demo.model.requests.CreateUserRequest;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import org.slf4j.LoggerFactory;
+
 @RestController
 @RequestMapping("/api/user")
 public class UserController {
@@ -36,7 +40,7 @@ public class UserController {
 	@Autowired
 	private BCryptPasswordEncoder bCryptPasswordEncoder;
 
-	private static Logger logger = LoggerFactory.getLogger(UserController.class);
+	public static final Logger logger = LoggerFactory.getLogger(UserController.class);
 
 	@GetMapping("/id/{id}")
 	public ResponseEntity<User> findById(@PathVariable Long id) {
@@ -53,6 +57,7 @@ public class UserController {
 	public ResponseEntity<User> createUser(@RequestBody CreateUserRequest createUserRequest) {
 		User user = new User();
 		user.setUsername(createUserRequest.getUsername());
+		logger.info("[UserController] User name set up with", createUserRequest.getUsername());
 		Cart cart = new Cart();
 		cartRepository.save(cart);
 		user.setCart(cart);
@@ -61,6 +66,7 @@ public class UserController {
 			!createUserRequest.getPassword().equals(createUserRequest.getConfirmPassword()))
 		{
 			logger.error("[UserController] CreateUser request failure for user[" + createUserRequest.getUsername() + "]");
+			logger.debug("[UserController] User build failed, length wasn't long enough or " + "password wasn't equal to confirm password");
 			return ResponseEntity.badRequest().build();
 		}
 		logger.info("[UserController] CreateUser request success for user[" + createUserRequest.getUsername() + "]");

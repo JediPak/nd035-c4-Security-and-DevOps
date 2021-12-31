@@ -1,3 +1,5 @@
 .idea/
-*/target/*
+*/target/
+starter_code/target/*
+*.class
 *.iml

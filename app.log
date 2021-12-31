@@ -1,0 +1,22 @@
+2021-12-31 01:19:11,403 INFO com.example.demo.SareetaApplication [main] Starting SareetaApplication on Jedis-MBP.hsd1.ca.comcast.net with PID 5533 (/Users/JediPak/Desktop/nd035-c4-Security-and-DevOps/starter_code/target/classes started by JediPak in /Users/JediPak/Desktop/nd035-c4-Security-and-DevOps)
+2021-12-31 01:19:11,425 DEBUG com.example.demo.SareetaApplication [main] Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2021-12-31 01:19:11,426 INFO com.example.demo.SareetaApplication [main] No active profile set, falling back to default profiles: default
+2021-12-31 01:19:15,516 INFO org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
+2021-12-31 01:19:15,517 INFO org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/9.0.29]
+2021-12-31 01:19:15,807 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [main] Initializing Spring embedded WebApplicationContext
+2021-12-31 01:19:16,112 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-12-31 01:19:16,357 INFO org.hibernate.Version [main] HHH000412: Hibernate Core {5.4.9.Final}
+2021-12-31 01:19:16,620 INFO org.hibernate.annotations.common.Version [main] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2021-12-31 01:19:16,804 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2021-12-31 01:19:17,237 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2021-12-31 01:19:17,277 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-12-31 01:19:19,053 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-12-31 01:19:20,474 DEBUG com.example.demo.security.JWTAuthenticationVerficationFilter [main] Filter 'JWTAuthenticationVerficationFilter' configured for use
+2021-12-31 01:19:22,673 INFO com.example.demo.SareetaApplication [main] Started SareetaApplication in 12.681 seconds (JVM running for 14.682)
+2021-12-31 01:19:54,818 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-12-31 01:20:01,265 INFO com.example.demo.controllers.UserController [http-nio-8080-exec-2] CreateUser request success for user[test]
+2021-12-31 01:20:09,918 DEBUG com.example.demo.security.JWTAuthenticationFilter [http-nio-8080-exec-3] Request is to process authentication
+2021-12-31 01:43:37,180 INFO com.example.demo.controllers.OrderController [http-nio-8080-exec-6] Order request success for user[test]
+2021-12-31 01:52:34,671 INFO com.example.demo.controllers.UserController [http-nio-8080-exec-2] CreateUser request failure for user[test02]
+2021-12-31 01:55:53,334 INFO com.zaxxer.hikari.HikariDataSource [SpringContextShutdownHook] HikariPool-1 - Shutdown initiated...
+2021-12-31 01:55:53,342 INFO com.zaxxer.hikari.HikariDataSource [SpringContextShutdownHook] HikariPool-1 - Shutdown completed.

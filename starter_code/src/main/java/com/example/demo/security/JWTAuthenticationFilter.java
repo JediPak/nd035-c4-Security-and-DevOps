@@ -47,12 +47,17 @@ public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilte
          User credentials = new ObjectMapper()
                  .readValue(req.getInputStream(), User.class);
 
-         return authenticationManager.authenticate(
+         Authentication auth =  authenticationManager.authenticate(
                  new UsernamePasswordAuthenticationToken(
                          credentials.getUsername(),
                          credentials.getPassword(),
                          new ArrayList<>()));
+         logger.info("[JWTAuthenticationFilter] User name set up with" + credentials.getUsername() +
+                 "has successfully logged in; please copy the token provided in the header");
+         return auth;
       } catch (IOException e) {
+         logger.error("[JWTAuthenticationFilter] User " +
+                 "has failed to log in; please try again");
          throw new RuntimeException(e);
       }
    }
